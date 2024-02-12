@@ -1,0 +1,215 @@
+---
+import Logo from "../images/logo-manchas-de-tinta.png"
+---
+
+<header>
+  <div class="header">
+    <div class="logo">
+      <a href="/">
+        <img 
+          class="logo-img"
+          src={Logo.src}
+          alt="logo pedaleros"
+        />
+      </a>
+    </div>
+
+    <div 
+      class="menu"
+      
+    >
+      <div class="menu-responsive">
+        <i 
+          class="fas fa-bars menu-icono"
+        ></i>
+      </div>
+
+      <nav class='nav' id="navbar">
+
+        <ul class="menu-lista lista-oculta">
+          <li class="menu-item">
+            <a href="/" class="menu-link">Inicio</a>
+          </li>
+          <li class="menu-item">
+            <a href="/reviews" class="menu-link">Reviews</a>
+          </li>
+          <li class="menu-item">
+            <a href="/contacto" class="menu-link">Contacto</a>
+          </li>
+          <li class="menu-item">
+            <a href="/sobre-mi" class="menu-link">Sobre mi</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+</header>
+
+<style>
+  
+  header {
+    width: 100%;
+    height: 80px;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .3);
+    background-color: white;
+  }
+
+  .header {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 6px 16px;
+  }
+
+  .logo {
+    height: 68px;
+  }
+
+  .logo-img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .menu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav {
+    width: 100%;
+    align-items: right;
+  }
+
+  .menu-lista {
+    display: flex;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 22px;
+  }
+
+  .menu-link {
+    font-weight: 900;
+    font-size: 18px;
+    text-decoration: none;
+
+    transition: color 250ms ease;
+
+    &:hover {
+      color: #008000;
+    }
+  }
+
+  .activo {
+    color: #008000;
+  }
+
+  .menu-responsive {
+    display: none;
+  }
+
+  /*** Apartado responsive ***/
+
+  @media (width <= 800px) {
+
+    .header {
+      width: 100%;
+    }
+
+    .menu-responsive {
+        display: block;
+    }
+
+    .nav {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      z-index: 20;
+    }
+
+    .menu-lista {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+      background-color: #fff;
+
+      transition: all 250ms ease;
+    }
+
+    .lista-oculta {
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .lista-visible {
+      height: 210px;
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .menu-item {
+        justify-content: center;
+      
+        width: 100%;
+        height: 40px;      
+        margin: 6px 0;
+    }
+
+    .menu-icono {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: right;
+        
+        font-size: 32px;
+        cursor: pointer;
+    }
+  }
+</style>
+
+<script>
+  const menuDesplegable = document.querySelector('.menu-lista');
+  const menuIcono = document.querySelector('.menu-icono');
+
+  function manejarClic() {
+    menuIcono.classList.toggle('fa-xmark');
+    menuDesplegable.classList.toggle('lista-visible')
+  }
+
+  menuIcono.addEventListener('click', manejarClic)
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const currentPath = location.pathname;
+    const menuItems = document.querySelectorAll('.menu-link');
+
+    menuItems.forEach( item => {
+      if (item.getAttribute('href') === currentPath) {
+        item.classList.add('activo')
+      }
+    })
+  })
+
+</script>

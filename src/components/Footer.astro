@@ -1,0 +1,108 @@
+---
+const fecha = new Date().getFullYear();
+---
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-menu">
+
+      <ul class="footer-menu-lista">
+        <li class='footer-menu-item'>
+          <a href="/" class="footer-menu-link"  >Inicio</a>
+        </li>
+        <li class='footer-menu-item'>
+          <a href="/aviso-legal" class="footer-menu-link">Aviso Legal</a>
+        </li>
+        <li class='footer-menu-item'>
+          <a href="/privacidad" class="footer-menu-link">Política de Privacidad</a>
+        </li>
+        <li class='footer-menu-item'>
+          <a href="/cookies" class="footer-menu-link">Política de Cookies</a>
+        </li>
+      </ul>
+    
+    </div>
+    <p class='copyright'>Copyright © {fecha} - manchasdetinta.net - derechos reservados</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    background-color: #424242;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-menu-lista {
+    width: 100%;
+    display: flex;
+    margin: auto;
+  }
+
+  .footer-menu-item {
+    list-style: none;
+    margin: 16px;
+  }
+
+  .footer-menu-link {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: color 250ms ease;
+    font-size: 18px;
+
+    &:hover {
+      color: #9dffab;
+    }
+  }
+
+  .activo {
+    color: #9dffab;
+  }
+
+  .copyright {
+    color: white;
+    font-size: 12px;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  @media (width <= 800px) {
+    
+    .footer-menu-lista {
+      flex-direction: column;
+      align-items: center;
+      margin-block: 24px;
+    }
+
+    .footer-menu-item {
+      margin: 8px;
+    }
+  }
+</style>
+
+<script>
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const currentPath = location.pathname;
+    const menuItems = document.querySelectorAll('.footer-menu-link');
+
+    menuItems.forEach( item => {
+      if (item.getAttribute('href') === currentPath) {
+        item.classList.add('activo')
+      }
+    })
+  })
+
+</script>

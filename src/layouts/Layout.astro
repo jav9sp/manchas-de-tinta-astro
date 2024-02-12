@@ -1,51 +1,51 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 interface Props {
 	title: string;
+	description: string;
+	keywords: string;
+	robots: string;
 }
 
-const { title } = Astro.props;
+const { title, description, keywords, robots } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="robots" content={robots}>
+		<meta name="google-site-verification" content="lW_lqkN6NY_tcTvcFeGizNWat3hk0Aw8GpLVJl1hZaw">
+		<link rel="icon" href="icono-manchas-de-tinta.ico" />
+		<script src="https://kit.fontawesome.com/a7a0089e5e.js" ></script>
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+
+	@font-face {
+		font-family: 'Josefin Sans';
+		src: url(../fonts/static/JosefinSans-SemiBold.ttf);
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Josefin Sans', sans-serif;
+		color: #242424;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+
 </style>
