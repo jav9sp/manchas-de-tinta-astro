@@ -1,12 +1,13 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import AvisoCookies from "../components/AvisoCookies.astro";
 
 interface Props {
-	title: string;
-	description: string;
-	keywords: string;
-	robots: string;
+  title: string;
+  description: string;
+  keywords: string;
+  robots: string;
 }
 
 const { title, description, keywords, robots } = Astro.props;
@@ -14,38 +15,49 @@ const { title, description, keywords, robots } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="keywords" content={keywords} />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="robots" content={robots}>
-		<meta name="google-site-verification" content="ea7qov-PwGNTg4ldLcu0Zq7RXqrbIjMQInLd86rpB28" />
-		<link rel="icon" href="icono-manchas-de-tinta.ico" />
-		<script src="https://kit.fontawesome.com/a7a0089e5e.js" ></script>
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content={robots} />
+    <meta
+      name="google-site-verification"
+      content="lW_lqkN6NY_tcTvcFeGizNWat3hk0Aw8GpLVJl1hZaw"
+    />
+    <link rel="icon" href="pedaleros.ico" />
+    <script src="https://kit.fontawesome.com/a7a0089e5e.js"></script>
+    <title>{title}</title>
+
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+    <AvisoCookies />
+  </body>
 </html>
 
 <style is:global>
 
-	@font-face {
-		font-family: 'Josefin Sans';
-		src: url(../fonts/static/JosefinSans-SemiBold.ttf);
-	}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Josefin Sans', sans-serif;
-		color: #242424;
-	}
+  body {
+    font-family: "Poppins", sans-serif;	
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #242424;
+  }
+
+  .contenedor {
+    max-width: 1200px;
+    margin: auto;
+    padding-inline: 16px;
+  }
 
 </style>

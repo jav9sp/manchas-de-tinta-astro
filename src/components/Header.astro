@@ -31,7 +31,7 @@ import Logo from "../images/logo-manchas-de-tinta.png"
             <a href="/" class="menu-link">Inicio</a>
           </li>
           <li class="menu-item">
-            <a href="/reviews" class="menu-link">Reviews</a>
+            <a href="/el-test-de-rorschach" class="menu-link">Sobre el test</a>
           </li>
           <li class="menu-item">
             <a href="/contacto" class="menu-link">Contacto</a>
@@ -50,16 +50,21 @@ import Logo from "../images/logo-manchas-de-tinta.png"
 <style>
   
   header {
-    width: 100%;
-    height: 80px;
+    width: 90%;
+    height: 60px;
 
     position: sticky;
-    top: 0;
+    top: 10px;
     left: 0;
     z-index: 10;
+
+    margin: auto;
+
+    border-radius: 50px;
     
     box-shadow: 0px 0px 6px rgba(0, 0, 0, .3);
-    background-color: white;
+    background-color: rgba(32, 34, 172, 0.5);
+    backdrop-filter: blur(4px);
   }
 
   .header {
@@ -75,7 +80,7 @@ import Logo from "../images/logo-manchas-de-tinta.png"
   }
 
   .logo {
-    height: 68px;
+    height: 54px;
   }
 
   .logo-img {
@@ -107,19 +112,20 @@ import Logo from "../images/logo-manchas-de-tinta.png"
   }
 
   .menu-link {
-    font-weight: 900;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 16px;
     text-decoration: none;
+    color: #350067;
 
     transition: color 250ms ease;
 
     &:hover {
-      color: #008000;
+      color: #fff;
     }
   }
 
   .activo {
-    color: #008000;
+    color: #fff;
   }
 
   .menu-responsive {
@@ -151,8 +157,10 @@ import Logo from "../images/logo-manchas-de-tinta.png"
       align-items: center;
       justify-content: center;
 
+      border-radius: 24px;
+
       box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-      background-color: #fff;
+      background-color: #967fd3;
 
       transition: all 250ms ease;
     }
@@ -185,6 +193,7 @@ import Logo from "../images/logo-manchas-de-tinta.png"
         justify-content: right;
         
         font-size: 32px;
+        color: #350067;
         cursor: pointer;
     }
   }

@@ -1,0 +1,157 @@
+<div class="aviso-contenedor activo">
+  <div class="aviso-cookies">
+
+    <h2>Aviso de Cookies</h2>
+
+    <p>Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies para almacenar y/o acceder a la información del dispositivo. El consentimiento de estas tecnologías nos permitirá procesar datos como el comportamiento de navegación o las identificaciones únicas en este sitio. No consentir o retirar el consentimiento, puede afectar negativamente a ciertas características y funciones.</p>
+
+    <div class="botones-aviso-cookies">
+      <button class="aceptar-btn">Aceptar</button>
+      <button class="rechazar-btn">Rechazar</button>
+    </div>
+
+    <div class="enlaces-aviso-cookies">
+      <a href="/politica-de-cookies">Política de Cookies</a>
+      <a href="/politica-de-privacidad">Política de Privacidad</a>
+      <a href="/aviso-legal">Aviso Legal</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .aviso-contenedor {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    animation: aparecer 800ms both ease;
+    animation-delay: 1s;
+  }
+
+  @keyframes aparecer {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+    100% {
+      opacity:1;
+      transform: scale(1);
+    }
+  }
+
+  .activo {
+    display: flex;
+  }
+
+  .aviso-cookies {
+    width: 50%;
+    background-color: #fff;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 12px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .botones-aviso-cookies {
+    display: flex;
+    justify-content: space-around;
+    margin-block: 16px;
+  }
+
+  .enlaces-aviso-cookies {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  button {
+    width: 30%;
+    padding: 16px 16px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .aceptar-btn {
+    background-color: #2ed046;
+    &:hover {
+      background-color: #1f9831;
+      color: #fff;
+    }
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  @media (width <= 820px) {
+    
+    .aviso-cookies {
+      width: 80%;
+    }
+    
+    .botones-aviso-cookies {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+
+</style>
+
+<script>
+
+  const avisoCookies = document.querySelector('.aviso-contenedor');
+  const aceptarBtn = document.querySelector('.aceptar-btn');
+  const rechazarBtn = document.querySelector('.rechazar-btn');
+
+  // dataLayer = [];
+
+  if (!localStorage.getItem('cookies-aceptadas')) {
+    avisoCookies.classList.add('activo');
+  } else {
+    avisoCookies.classList.remove('activo');
+    // dataLayer.push({'event':'cookies-aceptadas'});
+  }
+
+  aceptarBtn.addEventListener('click', () => {
+    avisoCookies.classList.remove('activo');
+    localStorage.setItem('cookies-aceptadas', 'si');
+
+    // dataLayer.push({'event':'cookies-aceptadas'});
+  })
+
+  rechazarBtn.addEventListener('click', () => {
+    avisoCookies.classList.remove('activo');
+    localStorage.setItem('cookies-aceptadas', 'no');
+  })
+
+</script>
