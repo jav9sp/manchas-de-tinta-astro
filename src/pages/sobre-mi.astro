@@ -1,11 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import MiFoto from "../images/8.jpg"
 ---
+
 <Layout
   title="Sobre mi"
   description="Sobre mí y el proyecto pedaleros.com"
   keywords=""
-  robots="index, follow"
->
-  <h1>Sobre mí...</h1>
+  robots="index, follow">
+  <main class="max-w-7xl py-8 px-4 mx-auto">
+    
+    <h1 class="text-4xl font-bold text-center">Soy Francisco, Psicólogo</h1>
+
+    <div class="flex flex-col items-center justify-center md:flex-row md:justify-between">
+      <div class="mt-10 md:flex-1">
+        <p class="leading-relaxed py-4">
+          Me formé en la Universidad de Concepción en Chile y desde mi primer
+          contacto con el test de Rorschach quedé encantado e intrigado
+          con su complejidad y profundidad.
+        </p>
+        <p class="leading-relaxed py-4">
+          Desde entonces me dediqué a comprenderlo y estudianlo a fondo. Con el
+          tiempo he podido profundizar más y más en su aplicación, codificación
+          e interpretación, por lo que me he propuesto crear un portal de
+          información clara y precisa sobre esta prueba, tanto para psicólogos
+          como para personas que no son parte de la profesión.
+        </p>
+        <p class="leading-relaxed py-4">
+          Me he esforzado en plantear cada línea escrita en este portal de
+          manera clara, para que tanto los entendidos como quienes recién se
+          inician en este apasionante mundo de las manchas de tinta, puedan
+          ampliar su conocimiento y comprensión de la que, para mi, es la prueba
+          más icónica del estudio de la psiquis.
+        </p>
+      </div>
+      <div class="flex justify-center mt-6 md:mt-0 md:flex-1">
+        <img
+          class="foto w-[360px] h-[360px] md:w-[420px] md:h-[420px] object-cover rounded-full shadow-lg maskim" 
+          src={MiFoto.src} 
+          alt="mi foto"
+        >
+      </div>
+    </div>
+  </main>
 </Layout>

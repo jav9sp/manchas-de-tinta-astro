@@ -1,37 +1,106 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+
+import Lam1 from '../images/1.jpg'
+import Lam2 from '../images/2.jpg'
+import Lam3 from '../images/3.jpg'
+import Lam4 from '../images/4.jpg'
+import Lam5 from '../images/5.jpg'
+import Lam6 from '../images/6.jpg'
+import Lam7 from '../images/7.jpg'
+import Lam8 from '../images/8.jpg'
+import Lam9 from '../images/9.jpg'
+import Lam10 from '../images/10.jpg'
 ---
 
-<Layout 
-	title="Manchas de Tinta"
-	description="Web especializada en el test de Rorschach su interpretación, teoría y respuestas."
-	keywords="test de rochard, test de las manchas, test de rorschach"
-	robots="index, follow"
->
+<Layout
+  title="Manchas de Tinta"
+  description="Web especializada en el test de Rorschach su interpretación, teoría y respuestas."
+  keywords="test de rochard, test de las manchas, test de rorschach"
+  robots="index, follow">
 
-	<article>
+  <body>
+    <!-- Sección Bienvenida -->
+    <section class="bg-blue-100 text-center p-8">
+      <h1 class="text-4xl font-bold text-blue-800">
+        Bienvenidos al Mundo del Test de Rorschach
+      </h1>
+      <p class="text-xl mt-4">
+        Descubre cómo podemos ayudarte a entender mejor tu mundo interior.
+      </p>
+    </section>
 
+    <!-- Sección Sobre el Test -->
+    <section class="p-8">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-semibold mb-6">
+          ¿Qué es el Test de Rorschach?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <p class="text-lg">
+            El Test de Rorschach es una herramienta psicológica proyectiva
+            utilizada para evaluar la personalidad y la emocionalidad de un
+            individuo. A través de la interpretación de manchas de tinta, los
+            profesionales pueden obtener insights profundos sobre el estado
+            psicológico de una persona.
+          </p>
+          <img
+            src={Lam1.src}
+            alt="Imagen Test de Rorschach"
+            class="imagen rounded-lg select-none"
+          />
+        </div>
+      </div>
+    </section>
 
+    <!-- Sección Cómo Funciona -->
+    <section class="bg-gray-100 p-8">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-6">Cómo Funciona</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h3 class="text-xl font-medium">Paso 1</h3>
+            <p>
+              Los participantes observan las manchas de tinta y expresan lo que
+              ven.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-medium">Paso 2</h3>
+            <p>Se analizan las respuestas desde una perspectiva psicológica.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-medium">Paso 3</h3>
+            <p>
+              Se elabora un informe detallado sobre la personalidad del
+              individuo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	</article>
-
+    <!-- Sección Contacto / Llamada a la Acción -->
+    <section class="p-8">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-semibold mb-6">Contacta con Nosotros</h2>
+        <p class="mb-6">
+          Si estás interesado en aplicar el Test de Rorschach o quieres saber
+          más sobre nuestros servicios, no dudes en contactarnos.
+        </p>
+        <a
+          href="contacto.html"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >Solicitar Información</a
+        >
+      </div>
+    </section>
+  </body>
+	
 </Layout>
 
 <style>
-
-	article {
-		max-width: 800px;
-		margin: 48px auto;
-		padding: 0 22px;
-	}
-
-	h2 {
-		margin-block: 48px;
-	}
-
-	p {
-		margin-block: 24px;
-		line-height: 1.8;
-	}
-
+  .imagen {
+    mask-image: radial-gradient(black 50%, transparent 60%);
+  }
 </style>

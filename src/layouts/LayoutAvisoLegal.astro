@@ -12,12 +12,12 @@ interface Props {
 const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
 ---
 
-<div class="contenedor">
-  <h1>Aviso Legal</h1>
+<div class="w max-w-7xl px-4 py-12 mx-auto">
+  <h1 class="text-4xl font-bold my-8 text-center">Aviso Legal</h1>
 
-  <h2>Datos de Identificación</h2>
+  <h2 class="text-xl font-bold">Datos de Identificación</h2>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     De acuerdo con la exigencia legal establecida, se cumple con la obligación
     de informar a todos los usuarios e interesados que la responsabilidad y
     titularidad del dominio web {sitioWeb}, así como las redes sociales y el
@@ -26,11 +26,11 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     WEB, y cuyo correo electrónico de contacto es {correo}.
   </p>
 
-  <h2>Términos y Condiciones</h2>
+  <h2 class="text-xl font-bold">Términos y Condiciones</h2>
 
-  <h3>Uso y Aplicación</h3>
+  <h3 class="text-lg font-bold">Uso y Aplicación</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     Los presentes términos y condiciones aplican tanto para la página principal
     de
     {sitioWeb} como para aquellas otras que hayan sido creadas por EL GESTOR DEL
@@ -38,9 +38,9 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     de este sitio web.
   </p>
 
-  <h3>Usuarios</h3>
+  <h3 class="text-lg font-bold">Usuarios</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     Se entenderá por usuario a toda aquella persona que navegue por el sitio
     web, accediendo a cualquiera de sus páginas o secciones, bastando con el
     simple acceso y/o uso de este sitio web, aceptando desde dicho acceso y/o
@@ -50,16 +50,16 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     obligatorio cumplimiento.
   </p>
 
-  <h3>Formas de contacto</h3>
+  <h3 class="text-lg font-bold">Formas de contacto</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     Si un usuario deseara contactar al GESTOR DEL SITIO WEB podrá enviar un
     correo electrónico a la dirección {correo}.
   </p>
 
-  <h3>Uso del Sitio Web</h3>
+  <h3 class="text-lg font-bold">Uso del Sitio Web</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     Toda la información gráfica, textual, de multimedia, fotografías, imágenes,
     videos, o cualquier otro formato de archivo digital que se encuentran en el
     sitio web, entendidos de aquí en adelante como “los contenidos”, le
@@ -67,7 +67,7 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     derecho de autor a nivel nacional e internacional.
   </p>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     El usuario asume la responsabilidad del uso del sitio web, no pudiendo
     emplearlos para:
   </p>
@@ -97,7 +97,7 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     </li>
   </ol>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB se reserva el derecho de retirar todos aquellos
     comentarios que vulneren el respeto a la dignidad de la persona, que sean
     discriminatorios, xenófobos, racistas, pornográficos, que atenten contra la
@@ -107,8 +107,8 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     cualquier herramienta de opinión que contenga el sitio web.
   </p>
 
-  <h3>Propiedad Intelectual</h3>
-  <p>
+  <h3 class="text-lg font-bold">Propiedad Intelectual</h3>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB es el titular de todos los derechos de propiedad
     intelectual e industrial del sitio web, así como de los elementos contenidos
     en la misma, los cuales, a título enunciativo, pero no limitativo, son:
@@ -121,7 +121,7 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     por cualquier medio técnico, con o sin fines comerciales sin la autorización
     del GESTOR DEL SITIO WEB.
   </p>
-  <p>
+  <p class="my-4 leading-[1.8]">
     El usuario se compromete a respetar los derechos de autor titularidad del
     GESTOR DEL SITIO WEB, podrá en consecuencia visualizar, imprimir, almacenar
     en un dispositivo electrónico o virtual, pero única y exclusivamente para su
@@ -133,14 +133,14 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     ningún momento modificar, total o parcialmente, cualquiera de los
     contenidos.
   </p>
-  <p>
+  <p class="my-4 leading-[1.8]">
     No se podrá compartir ningún extracto de un curso, libro, entrada del blog o
     de cualquier parte del sitio web, ya sea incluso una mención a terceros.
   </p>
 
-  <h3>Exclusión de Garantías y Responsabilidad</h3>
+  <h3 class="text-lg font-bold">Exclusión de Garantías y Responsabilidad</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB ha adoptado todas las medidas tecnológicas,
     necesarias en el sitio web, para evitar daños y perjuicios de cualquier
     naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones
@@ -150,15 +150,15 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     medidas falla como consecuencia de un uso indebido y/o abusivo por parte de
     un tercero.
   </p>
-  <p>
+  <p class="my-4 leading-[1.8]">
     El usuario deberá en todo momento abstenerse de suprimir, alterar, eludir o
     manipular cualquier dispositivo de protección o sistema de seguridad que
     estuviera instalado en el sitio web.
   </p>
 
-  <h3>Modificaciones</h3>
+  <h3 class="text-lg font-bold">Modificaciones</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB se reserva el derecho de efectuar, sin previo aviso,
     las modificaciones que considere oportunas en el sitio web, pudiendo
     cambiar, suprimir o añadir tanto los contenidos y servicios que se presten a
@@ -166,9 +166,9 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     localizados, así como el diseño y estructura del mismo.
   </p>
 
-  <h3>Enlaces</h3>
+  <h3 class="text-lg font-bold">Enlaces</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB no tiene control alguno sobre los enlaces y/o
     contenidos externos que puedan existir en el sitio web, por lo que no se
     hace responsable por los mismos, ni garantizará la disponibilidad técnica,
@@ -178,9 +178,9 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     con el titular y/o responsable del dominio web al cual estén asociados.
   </p>
 
-  <h3>Enlaces de afiliados</h3>
+  <h3 class="text-lg font-bold">Enlaces de afiliados</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     Este sitio web posee enlaces de afiliación hacia Amazon. Al momento de hacer
     clic en ellos se dirigirá a su plataforma y de realizar alguna compra, será
     Amazon la encargada de procesar la compra, y EL GESTOR DEL SITIO WEB en su
@@ -188,18 +188,18 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     por el uso de los enlaces que cumplan con los requisitos aplicables.
   </p>
 
-  <h3>Derecho de exclusión</h3>
+  <h3 class="text-lg font-bold">Derecho de exclusión</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB se reserva el derecho a denegar o retirar el acceso
     al sitio web y/o los servicios ofrecidos sin necesidad de preaviso, a
     instancia propia o de un tercero, a aquellos usuarios que incumplan los
     presentes términos y condiciones.
   </p>
 
-  <h3>Garantía de los resultados</h3>
+  <h3 class="text-lg font-bold">Garantía de los resultados</h3>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB no se hará responsable por el éxito o fracaso de los
     usuarios en la aplicación de la información que reciban del sitio web o de
     los servicios que ofrece EL GESTOR DEL SITIO WEB. El usuario será el único
@@ -207,7 +207,7 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     por EL GESTOR DEL SITIO WEB.
   </p>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     Los contenidos que se suministran, se imparten de manera informativa, no
     queriendo en ningún momento EL GESTOR DEL SITIO WEB sustituir alguna
     asesoría profesional personalizada que el usuario, cliente o participante
@@ -219,17 +219,17 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     sitio web.
   </p>
 
-  <h2>Modificaciones del presente Aviso Legal y su duración</h2>
+  <h2 class="text-xl font-bold">Modificaciones del presente Aviso Legal y su duración</h2>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB podrá modificar, en cualquier momento, los términos
     y condiciones aquí expuestos, sin previo aviso y estarán vigentes mientras
     se encuentren debidamente publicadas.
   </p>
 
-  <h2>Acciones Legales</h2>
+  <h2 class="text-xl font-bold">Acciones Legales</h2>
 
-  <p>
+  <p class="my-4 leading-[1.8]">
     EL GESTOR DEL SITIO WEB puede, en cualquier momento, ejercer acciones
     legales de carácter civil o penal, contra cualquier persona que realice un
     uso indebido del contenido expuesto en el sitio web, o por incumplir con
@@ -239,34 +239,3 @@ const { nombre, rut, correo, sitioWeb, direccion, ciudad, pais } = Astro.props;
     sitio web.
   </p>
 </div>
-
-<style>
-  h1 {
-    text-align: center;
-  }
-
-  h1,
-  h2,
-  h3,
-  p {
-    margin-block: 24px;
-  }
-
-  p {
-    line-height: 1.8;
-  }
-
-  ol {
-    padding-left: 24px;
-  }
-
-  li {
-    margin-block: 12px;
-  }
-
-  .contenedor {
-    max-width: 1200px;
-    margin: auto;
-    padding: 32px 16px;
-  }
-</style>

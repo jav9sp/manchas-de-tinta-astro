@@ -1,132 +1,58 @@
 ---
-import Logo from "../images/logo-manchas-de-tinta.png"
+import Logo from "../images/logo-manchas-de-tinta.png";
 ---
 
-<header>
-  <div class="header">
-    <div class="logo">
+<header
+  class="w-11/12 mx-auto rounded-full sticky top-4 z-50 mb-6 h-14 bg-white/80 backdrop-blur-sm shadow-md">
+  <div class="flex items-center justify-between px-6 max-w-7xl h-full mx-auto">
+    <div class="w-12">
       <a href="/">
-        <img 
-          class="logo-img"
-          src={Logo.src}
-          alt="logo pedaleros"
-        />
+        <img class="object-cover" src={Logo.src} alt="logo manchas de tinta" />
       </a>
     </div>
 
-    <div 
-      class="menu"
-      
-    >
+    <div class="flex flex-row-reverse">
       <div class="menu-responsive">
-        <i 
-          class="fas fa-bars menu-icono"
-        ></i>
+        <i class="fas fa-bars icono text-3xl cursor-pointer text-emerald-900"></i>
       </div>
 
-      <nav class='nav' id="navbar">
-
-        <ul class="menu-lista lista-oculta">
-          <li class="menu-item">
-            <a href="/" class="menu-link">Inicio</a>
+      <nav class="nav" id="navbar">
+        <ul class="menu-lista lista-oculta fixed md:static top-20 w-full left-0 flex flex-col items-center justify-center gap-6 bg-white rounded-2xl shadow-lg md:gap-10 md:bg-transparent md:flex-row md:shadow-none duration-500">
+          <li class="">
+            <a
+              href="/"
+              class="link font-semibold hover:text-emerald-800 transition"
+              >Inicio</a
+            >
           </li>
-          <li class="menu-item">
-            <a href="/el-test-de-rorschach" class="menu-link">Sobre el test</a>
+          <li class="">
+            <a
+              href="/el-test-de-rorschach"
+              class="link font-semibold hover:text-emerald-800 transition"
+              >Sobre el test</a
+            >
           </li>
-          <li class="menu-item">
-            <a href="/contacto" class="menu-link">Contacto</a>
+          <li class="">
+            <a
+              href="/contacto"
+              class="link font-semibold hover:text-emerald-800 transition"
+              >Contacto</a
+            >
           </li>
-          <li class="menu-item">
-            <a href="/sobre-mi" class="menu-link">Sobre mi</a>
+          <li class="">
+            <a
+              href="/sobre-mi"
+              class="link font-semibold hover:text-emerald-800 transition"
+              >Sobre mi</a
+            >
           </li>
         </ul>
-
       </nav>
-
     </div>
   </div>
 </header>
 
 <style>
-  
-  header {
-    width: 90%;
-    height: 60px;
-
-    position: sticky;
-    top: 10px;
-    left: 0;
-    z-index: 10;
-
-    margin: auto;
-
-    border-radius: 50px;
-    
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, .3);
-    background-color: rgba(32, 34, 172, 0.5);
-    backdrop-filter: blur(4px);
-  }
-
-  .header {
-    max-width: 1200px;
-    height: 100%;
-    margin: auto;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    padding: 6px 16px;
-  }
-
-  .logo {
-    height: 54px;
-  }
-
-  .logo-img {
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .menu {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .nav {
-    width: 100%;
-    align-items: right;
-  }
-
-  .menu-lista {
-    display: flex;
-  }
-
-  .menu-item {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin-left: 22px;
-  }
-
-  .menu-link {
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
-    color: #350067;
-
-    transition: color 250ms ease;
-
-    &:hover {
-      color: #fff;
-    }
-  }
-
-  .activo {
-    color: #fff;
-  }
 
   .menu-responsive {
     display: none;
@@ -135,34 +61,12 @@ import Logo from "../images/logo-manchas-de-tinta.png"
   /*** Apartado responsive ***/
 
   @media (width <= 800px) {
-
     .header {
       width: 100%;
     }
 
     .menu-responsive {
-        display: block;
-    }
-
-    .nav {
-      position: fixed;
-      top: 80px;
-      left: 0;
-      z-index: 20;
-    }
-
-    .menu-lista {
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 24px;
-
-      box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-      background-color: #967fd3;
-
-      transition: all 250ms ease;
+      display: block;
     }
 
     .lista-oculta {
@@ -176,49 +80,28 @@ import Logo from "../images/logo-manchas-de-tinta.png"
       opacity: 1;
       visibility: visible;
     }
-    
-    .menu-item {
-        justify-content: center;
-      
-        width: 100%;
-        height: 40px;      
-        margin: 6px 0;
-    }
-
-    .menu-icono {
-        width: 100%;
-        height: 100%;
-
-        display: flex;
-        justify-content: right;
-        
-        font-size: 32px;
-        color: #350067;
-        cursor: pointer;
-    }
   }
 </style>
 
 <script>
-  const menuDesplegable = document.querySelector('.menu-lista');
-  const menuIcono = document.querySelector('.menu-icono');
+  const menuDesplegable = document.querySelector(".menu-lista");
+  const menuIcono = document.querySelector(".icono");
 
   function manejarClic() {
-    menuIcono.classList.toggle('fa-xmark');
-    menuDesplegable.classList.toggle('lista-visible')
+    menuIcono.classList.toggle("fa-xmark");
+    menuDesplegable.classList.toggle("lista-visible");
   }
 
-  menuIcono.addEventListener('click', manejarClic)
+  menuIcono.addEventListener("click", manejarClic);
 
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     const currentPath = location.pathname;
-    const menuItems = document.querySelectorAll('.menu-link');
+    const menuItems = document.querySelectorAll(".menu-link");
 
-    menuItems.forEach( item => {
-      if (item.getAttribute('href') === currentPath) {
-        item.classList.add('activo')
+    menuItems.forEach((item) => {
+      if (item.getAttribute("href") === currentPath) {
+        item.classList.add("text-emerald-600");
       }
-    })
-  })
-
+    });
+  });
 </script>

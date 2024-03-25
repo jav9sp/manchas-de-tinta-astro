@@ -2,104 +2,39 @@
 const fecha = new Date().getFullYear();
 ---
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-menu">
+<footer class="w-full bg-slate-800">
+  <div class="max-w-11/12 flex flex-col items-center justify-center p-4 md:gap-8">
+    <div class="footer-menu w-full">
 
-      <ul class="footer-menu-lista">
-        <li class='footer-menu-item'>
-          <a href="/" class="footer-menu-link">Inicio</a>
+      <ul class="flex flex-col items-center justify-center mb-4 md:flex-row md:gap-12 md:mt-6">
+        <li class='my-2'>
+          <a href="/" class="link text-white text-center">Inicio</a>
         </li>
-        <li class='footer-menu-item'>
-          <a href="/aviso-legal" class="footer-menu-link">Aviso Legal</a>
+        <li class='my-2'>
+          <a href="/aviso-legal" class="link text-white text-center">Aviso Legal</a>
         </li>
-        <li class='footer-menu-item'>
-          <a href="/politica-de-privacidad" class="footer-menu-link">Política de Privacidad</a>
+        <li class='my-2'>
+          <a href="/politica-de-privacidad" class="link text-white text-center">Política de Privacidad</a>
         </li>
-        <li class='footer-menu-item'>
-          <a href="/politica-de-cookies" class="footer-menu-link">Política de Cookies</a>
+        <li class='my-2'>
+          <a href="/politica-de-cookies" class="link text-white text-center">Política de Cookies</a>
         </li>
       </ul>
     
     </div>
-    <p class='copyright'>Copyright © {fecha} - manchasdetinta.net</p>
+    <p class="text-white text-xs text-center mt-4">Copyright © {fecha} - manchasdetinta.net</p>
   </div>
 </footer>
-
-<style>
-  footer {
-    width: 100%;
-    background-color: #424242;
-  }
-
-  .footer-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .footer-menu-lista {
-    width: 100%;
-    display: flex;
-    margin: auto;
-  }
-
-  .footer-menu-item {
-    list-style: none;
-    margin: 16px;
-  }
-
-  .footer-menu-link {
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    transition: color 250ms ease;
-    font-size: 18px;
-
-    &:hover {
-      color: #c6b1ff;
-    }
-  }
-
-  .activo {
-    color: #c6b1ff;
-  }
-
-  .copyright {
-    color: white;
-    font-size: 12px;
-    margin-top: 16px;
-    text-align: center;
-  }
-
-  @media (width <= 800px) {
-    
-    .footer-menu-lista {
-      flex-direction: column;
-      align-items: center;
-      margin-block: 24px;
-    }
-
-    .footer-menu-item {
-      margin: 8px;
-    }
-  }
-</style>
 
 <script>
   
   document.addEventListener("DOMContentLoaded", function() {
     const currentPath = location.pathname;
-    const menuItems = document.querySelectorAll('.footer-menu-link');
+    const menuItems = document.querySelectorAll('.link');
 
     menuItems.forEach( item => {
       if (item.getAttribute('href') === currentPath) {
-        item.classList.add('activo')
+        item.classList.add('text-green-400', 'font-bold')
       }
     })
   })
