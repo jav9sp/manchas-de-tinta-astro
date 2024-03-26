@@ -1,0 +1,1 @@
+import"https://kit.fontawesome.com/a7a0089e5e.js";import"./AvisoCookies.astro_astro_type_script_index_0_lang.DwkhAHlp.js";const t=document.querySelector(".lamina-muestra"),r=document.querySelectorAll(".lamina-ro");if(r.length>0){const e=r[0];t.src=e.src}r.forEach((e,o)=>{e.addEventListener("mouseenter",()=>{const n=e;t.src=n.src})});
