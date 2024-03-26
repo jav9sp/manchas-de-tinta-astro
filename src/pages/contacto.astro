@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Contacto"
+  description="Formulario para que me contactes en caso de duda o sugerencia."
+  keywords=""
+  robots="noindex">
+  <main class="max-w-screen-xl py-8 px-4 mx-auto">
+    <h1 class="t text-4xl font-bold my-8">Contacto</h1>
+    <div class="max-w-screen-xl mx-auto my-12">
+      <form
+        action="/send-contact"
+        method="POST"
+        class="bg-white rounded p-8">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-4" for="name">
+            Nombre
+          </label>
+          <input
+            class="border rounded w-full text-gray-700 py-2 px-4 leading-tight focus:outline-none"
+            id="name"
+            type="text"
+            placeholder="Tu nombre"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-4" for="email">
+            Correo Electrónico
+          </label>
+          <input
+            class="border rounded w-full text-gray-700 py-2 px-4 leading-tight focus:outline-none"
+            id="email"
+            type="email"
+            placeholder="tuemail@ejemplo.com"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-4"
+            for="subject">
+            Asunto
+          </label>
+          <input
+            class="border rounded w-full text-gray-700 py-2 px-4 leading-tight focus:outline-none"
+            id="subject"
+            type="text"
+            placeholder="Asunto del mensaje"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 text-sm font-bold mb-4"
+            for="message">
+            Mensaje
+          </label>
+          <textarea
+            class="border rounded w-full text-gray-700 py-2 px-4 leading-tight focus:outline-none"
+            id="message"
+            placeholder="Escribe tu mensaje aquí"
+            rows="4"
+            required></textarea>
+        </div>
+        <button
+          class="font-bold text-white bg-emerald-500 hover:bg-emerald-700 w-full py-2 px-4 rounded"
+          type="submit">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </main>
+</Layout>

@@ -1,24 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import Lam1 from '../images/1.jpg'
-import Lam2 from '../images/2.jpg'
-import Lam3 from '../images/3.jpg'
-import Lam4 from '../images/4.jpg'
-import Lam5 from '../images/5.jpg'
-import Lam6 from '../images/6.jpg'
-import Lam7 from '../images/7.jpg'
-import Lam8 from '../images/8.jpg'
-import Lam9 from '../images/9.jpg'
-import Lam10 from '../images/10.jpg'
+import Lam1 from "../images/1.jpg";
+import Lam2 from "../images/2.jpg";
+import Lam3 from "../images/3.jpg";
+import Lam4 from "../images/4.jpg";
+import Lam5 from "../images/5.jpg";
+import Lam6 from "../images/6.jpg";
+import Lam7 from "../images/7.jpg";
+import Lam8 from "../images/8.jpg";
+import Lam9 from "../images/9.jpg";
+import Lam10 from "../images/10.jpg";
 ---
 
 <Layout
   title="Manchas de Tinta"
   description="Web especializada en el test de Rorschach su interpretación, teoría y respuestas."
   keywords="test de rochard, test de las manchas, test de rorschach"
-  robots="index, follow">
-
+  robots="index follow">
   <body>
     <!-- Sección Bienvenida -->
     <section class="bg-blue-100 text-center p-8">
@@ -95,12 +94,81 @@ import Lam10 from '../images/10.jpg'
         >
       </div>
     </section>
+
+    <!-- Láminas del Rorschach -->
+
+    <div class="flex justify-center items-center w-4/5 md:w-[640px] m-auto">
+      <img class="lamina-muestra"/>
+    </div>
+
+    <div class="flex gap-2 overflow-hidden my-6 justify-center flex-wrap">
+      <img
+        src={Lam1.src}
+        alt="Lámina 1 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam2.src}
+        alt="Lámina 2 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam3.src}
+        alt="Lámina 3 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam4.src}
+        alt="Lámina 4 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam5.src}
+        alt="Lámina 5 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam6.src}
+        alt="Lámina 6 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam7.src}
+        alt="Lámina 7 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam8.src}
+        alt="Lámina 8 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam9.src}
+        alt="Lámina 9 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+      <img
+        src={Lam10.src}
+        alt="Lámina 10 del test de Rorschach"
+        class="lamina-ro object-cover h-12"
+      />
+    </div>
   </body>
-	
 </Layout>
 
-<style>
-  .imagen {
-    mask-image: radial-gradient(black 50%, transparent 60%);
+<script>
+  const laminaMuestra = document.querySelector(".lamina-muestra") as HTMLImageElement;
+  const laminasRo = document.querySelectorAll(".lamina-ro");
+
+  if (laminasRo.length > 0) {
+    const primeraLamina = laminasRo[0] as HTMLImageElement;
+    laminaMuestra.src = primeraLamina.src;
   }
-</style>
+
+  laminasRo.forEach((lamina, i) => {
+    lamina.addEventListener("mouseenter", () => {
+      const img = lamina as HTMLImageElement;
+      laminaMuestra.src = img.src;
+    });
+  });
+</script>

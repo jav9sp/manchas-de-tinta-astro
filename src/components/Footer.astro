@@ -8,16 +8,16 @@ const fecha = new Date().getFullYear();
 
       <ul class="flex flex-col items-center justify-center mb-4 md:flex-row md:gap-12 md:mt-6">
         <li class='my-2'>
-          <a href="/" class="link text-white text-center">Inicio</a>
+          <a href="/" class="link text-white text-center font-bold hover:text-emerald-400">Inicio</a>
         </li>
         <li class='my-2'>
-          <a href="/aviso-legal" class="link text-white text-center">Aviso Legal</a>
+          <a href="/aviso-legal" class="link text-white text-center font-bold hover:text-emerald-400">Aviso Legal</a>
         </li>
         <li class='my-2'>
-          <a href="/politica-de-privacidad" class="link text-white text-center">Política de Privacidad</a>
+          <a href="/politica-de-privacidad" class="link text-white text-center font-bold hover:text-emerald-400">Política de Privacidad</a>
         </li>
         <li class='my-2'>
-          <a href="/politica-de-cookies" class="link text-white text-center">Política de Cookies</a>
+          <a href="/politica-de-cookies" class="link text-white text-center font-bold hover:text-emerald-400">Política de Cookies</a>
         </li>
       </ul>
     
@@ -34,7 +34,7 @@ const fecha = new Date().getFullYear();
 
     menuItems.forEach( item => {
       if (item.getAttribute('href') === currentPath) {
-        item.classList.add('text-green-400', 'font-bold')
+        item.classList.add('text-emerald-400', 'font-bold')
       }
     })
   })
