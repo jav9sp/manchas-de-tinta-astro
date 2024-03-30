@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import AvisoCookies from "../components/AvisoCookies.astro";
 
 interface Props {
   title: string;
@@ -26,12 +25,11 @@ const { title, description, keywords, robots } = Astro.props;
       name="google-site-verification"
       content="ea7qov-PwGNTg4ldLcu0Zq7RXqrbIjMQInLd86rpB28"
     />
-    <link rel="icon" href="icono-manchas-de-tinta.ico" />
+    <link rel="icon" href="/icono-manchas-de-tinta.ico" />
     <script src="https://kit.fontawesome.com/a7a0089e5e.js"></script>
     <title>{title}</title>
   </head>
   <body class="relative">
-    <AvisoCookies />
     <Header />
     <slot />
     <Footer />

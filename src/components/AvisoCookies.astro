@@ -133,20 +133,20 @@
   const aceptarBtn = document.querySelector('.aceptar-btn');
   const rechazarBtn = document.querySelector('.rechazar-btn');
 
-  // dataLayer = [];
+  //dataLayer = [];
 
   if (!localStorage.getItem('cookies-aceptadas')) {
     avisoCookies.classList.add('activo');
   } else {
     avisoCookies.classList.remove('activo');
-    // dataLayer.push({'event':'cookies-aceptadas'});
+    //dataLayer.push({'event':'cookies-aceptadas'});
   }
 
   aceptarBtn.addEventListener('click', () => {
     avisoCookies.classList.remove('activo');
     localStorage.setItem('cookies-aceptadas', 'si');
 
-    // dataLayer.push({'event':'cookies-aceptadas'});
+    //dataLayer.push({'event':'cookies-aceptadas'});
   })
 
   rechazarBtn.addEventListener('click', () => {

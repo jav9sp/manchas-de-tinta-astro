@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PreguntaFrecuente from "../components/PreguntaFrecuente.jsx";
 
 import Lam1 from "../images/1.jpg";
 import Lam2 from "../images/2.jpg";
@@ -11,6 +12,7 @@ import Lam7 from "../images/7.jpg";
 import Lam8 from "../images/8.jpg";
 import Lam9 from "../images/9.jpg";
 import Lam10 from "../images/10.jpg";
+import TarjetaArticulo from "../components/TarjetaArticulo.astro";
 ---
 
 <Layout
@@ -20,85 +22,98 @@ import Lam10 from "../images/10.jpg";
   robots="index follow">
   <body>
     <!-- Sección Bienvenida -->
-    <section class="bg-blue-100 text-center p-8">
-      <h1 class="text-4xl font-bold text-blue-800">
-        Bienvenidos al Mundo del Test de Rorschach
-      </h1>
+    <section class="bg-emerald-100 text-center p-8">
+      <h1 class="text-4xl font-bold text-emerald-800">El Test de Rorschach</h1>
       <p class="text-xl mt-4">
-        Descubre cómo podemos ayudarte a entender mejor tu mundo interior.
+        Todo lo que necesitas para entender el test, explicado por un psicólogo
       </p>
     </section>
 
     <!-- Sección Sobre el Test -->
     <section class="p-8">
       <div class="container mx-auto">
-        <h2 class="text-3xl font-semibold mb-6">
+        <h2 class="text-3xl font-semibold mb-6 text-center md:text-left">
           ¿Qué es el Test de Rorschach?
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <p class="text-lg">
-            El Test de Rorschach es una herramienta psicológica proyectiva
-            utilizada para evaluar la personalidad y la emocionalidad de un
-            individuo. A través de la interpretación de manchas de tinta, los
-            profesionales pueden obtener insights profundos sobre el estado
-            psicológico de una persona.
-          </p>
-          <img
-            src={Lam1.src}
-            alt="Imagen Test de Rorschach"
-            class="imagen rounded-lg select-none"
-          />
-        </div>
+        <p class="text-lg my-4">
+          El Test de Rorschach es la prueba más icónica en la psicología y la
+          evaluación de la personalidad. Es raro que no hayas visto alguna de
+          las láminas del test, ya que se ha hecho referencia a ellas en el
+          cine, la televisión y en un sinfín de contextos más.
+        </p>
+        <p class="text-lg my-4">
+          El fin de esta web es ser de utilidad tanto a psicólogos que necesiten
+          ahondar en su teoría e interpretación, como a personas que no tienen
+          relación con la profesión pero que quieren aprender un poco más sobre
+          ésta. Los artículos que encontrarás acá te ayudarán a derribar mitos y
+          conseguir un entendimiento teóricamente correcto sobre la prueba.
+        </p>
       </div>
     </section>
 
-    <!-- Sección Cómo Funciona -->
     <section class="bg-gray-100 p-8">
       <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-6">Cómo Funciona</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h2 class="text-3xl font-semibold mb-6">
+          Cómo se aplica el Test de Rorschach
+        </h2>
+        <p class="text-ls my-4">
+          El proceso de aplicación del test generalmente se desarrolla así:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 my-8">
           <div>
             <h3 class="text-xl font-medium">Paso 1</h3>
             <p>
-              Los participantes observan las manchas de tinta y expresan lo que
-              ven.
+              Entrevista inicial, donde el evaluador recopila información sobre
+              el porqué la persona requiere la evaluación.
             </p>
           </div>
           <div>
             <h3 class="text-xl font-medium">Paso 2</h3>
-            <p>Se analizan las respuestas desde una perspectiva psicológica.</p>
+            <p>
+              Aplicación de la prueba, donde la persona da sus respuestas ante
+              las 10 láminas del test.
+            </p>
           </div>
           <div>
             <h3 class="text-xl font-medium">Paso 3</h3>
             <p>
-              Se elabora un informe detallado sobre la personalidad del
-              individuo.
+              Interpretación y elaboración del informe por parte del evaluador.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-medium">Paso 4</h3>
+            <p>
+              Devolución de resultados, donde el evaluador entrega el informe y
+              se repasan algunos de los puntos más importantes encontrados.
             </p>
           </div>
         </div>
+        <p class="text-ls my-4 font-bold">
+          Para que una evaluación se considere completa, debería cumplir con al
+          menos estos cuatro pasos.
+        </p>
       </div>
     </section>
 
     <!-- Sección Contacto / Llamada a la Acción -->
     <section class="p-8">
       <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-6">Contacta con Nosotros</h2>
+        <h2 class="text-3xl font-semibold mb-6">
+          Cuáles son las láminas del Test de Rorschach
+        </h2>
         <p class="mb-6">
-          Si estás interesado en aplicar el Test de Rorschach o quieres saber
-          más sobre nuestros servicios, no dudes en contactarnos.
+          El test consta de 10 láminas, 5 en escala de grises y 5 que incluyen
+          colores cromáticos.
         </p>
-        <a
-          href="contacto.html"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >Solicitar Información</a
-        >
       </div>
     </section>
 
     <!-- Láminas del Rorschach -->
 
+    <section>
+
     <div class="flex justify-center items-center w-4/5 md:w-[640px] m-auto">
-      <img class="lamina-muestra"/>
+      <img class="lamina-muestra" />
     </div>
 
     <div class="flex gap-2 overflow-hidden my-6 justify-center flex-wrap">
@@ -153,11 +168,36 @@ import Lam10 from "../images/10.jpg";
         class="lamina-ro object-cover h-12"
       />
     </div>
+  </section>
+
+  <article class="container mx-auto">
+    <section class="p-8">
+      <h2 class="text-3xl font-semibold mb-6">
+        Aprende más sobre el test de Rorschach
+      </h2>
+      <p class="my-4">He preparado artículos con los temas más importantes para que vayas profundizando en el test:</p>
+    </section>
+    <div class="px-8 mx-auto mb-8 flex flex-wrap items-center justify-center gap-8">
+
+      <TarjetaArticulo
+        titulo="Las respuestas más comunes del Rorschach"
+        descripcion="Hay respuestas muy comunes que se espera que des, descúbrelas acá..."
+        enlace="/interpretacion/respuestas-populares-rorschach"
+        imagen={Lam1.src}
+      />
+    
+    </div>
+  </article>
+
+
+
   </body>
 </Layout>
 
 <script>
-  const laminaMuestra = document.querySelector(".lamina-muestra") as HTMLImageElement;
+  const laminaMuestra = document.querySelector(
+    ".lamina-muestra"
+  ) as HTMLImageElement;
   const laminasRo = document.querySelectorAll(".lamina-ro");
 
   if (laminasRo.length > 0) {
@@ -165,7 +205,7 @@ import Lam10 from "../images/10.jpg";
     laminaMuestra.src = primeraLamina.src;
   }
 
-  laminasRo.forEach((lamina, i) => {
+  laminasRo.forEach(lamina => {
     lamina.addEventListener("mouseenter", () => {
       const img = lamina as HTMLImageElement;
       laminaMuestra.src = img.src;

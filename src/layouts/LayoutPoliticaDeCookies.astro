@@ -8,28 +8,28 @@ interface Props {
 const { nombre, sitioWeb, correo } = Astro.props;
 ---
 
-<div class="contenedor">
-  <h1>Política de Cookies</h1>
+<div class="m max-w-screen-xl py-8 px-4">
+  <h1 class=" text-2xl text-center font-bold mb-8">Política de Cookies</h1>
 
-  <h2>Consideraciones Previas</h2>
+  <h2 class="text-xl font-bold my-6">Consideraciones Previas</h2>
 
-  <p>
+  <p class="py-2 leading-loose">
     Se entenderá por usuario toda persona que navegue en el sitio web {sitioWeb}
     en lo adelante, simplemente el sitio web.
   </p>
 
-  <p>
+  <p class="py-2 leading-loose">
     Se entenderá por editor el dueño del sitio web, quien es {nombre} y está identificado
     en el aviso legal.
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     Las cookies utilizadas en el navegador del usuario se han instalado con su
     autorización. Si en algún momento desea revocar esta autorización, podrá
     hacerlo sin obstáculo alguno. Para ello puede visualizar la sección
     Desactivación o eliminación de cookies, que se encuentra descrita en estas
     políticas.
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     El Editor está en total libertad de realizar los cambios que considere
     pertinentes en el sitio web. Para ello podrá añadir apartados,
     funcionalidades o cualquier elemento que quizás pueda generar el uso de
@@ -39,16 +39,16 @@ const { nombre, sitioWeb, correo } = Astro.props;
     última visita realizada.
   </p>
 
-  <h2>Definición y función de las Cookies</h2>
+  <h2 class="text-xl font-bold my-6">Definición y función de las Cookies</h2>
 
-  <p>
+  <p class="py-2 leading-loose">
     Las cookies son informaciones que se almacenan en el navegador del usuario
     de un sitio web para poder consultar la actividad previa que ha tenido, así
     como recordar ciertos datos para una próxima visita. También pueden ser
     llamadas web beacons, píxel, bugs, rastreadores, pero a efectos de estas
     políticas, se entenderán solamente como cookies.
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     Suelen almacenar datos de carácter técnico, estadísticas de uso,
     personalización de perfiles, enlaces a redes sociales, administración de
     preferencias personales, entre otras funciones, con el fin de poder adaptar
@@ -56,12 +56,12 @@ const { nombre, sitioWeb, correo } = Astro.props;
     la experiencia de la navegación, el no aceptarlas podría entorpecer el
     servicio que el sitio web desea ofrecer.
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     No son archivos de virus, spam, troyanos, gusanos, spyware, ni programación
     publicitaria ya sea estática en la página o en formato de ventana emergente
     (pop-up).
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     La información almacenada se refiere al navegador (Internet Explorer,
     Safari, Chrome, Firefox, etc.), y no al usuario, para constatar esto puede
     entrar en el mismo dominio web y verificar en dos navegadores diferentes que
@@ -70,10 +70,10 @@ const { nombre, sitioWeb, correo } = Astro.props;
 
   <h3>Tipos de Cookies según quién las gestiona</h3>
 
-  <p>Las cookies pueden ser:</p>
+  <p class="py-2 leading-loose">Las cookies pueden ser:</p>
 
   <ul>
-    <li>
+    <li class="my-4">
       Propias: cuando son gestionadas por el propio editor del sitio web. Se
       envían al equipo terminal del usuario desde un equipo o dominio gestionado
       por el propio editor y desde el que se presta el servicio solicitado por
@@ -85,11 +85,11 @@ const { nombre, sitioWeb, correo } = Astro.props;
     </li>
   </ul>
 
-  <p>Este sitio web utiliza cookies propias y de terceros.</p>
+  <p class="py-2 leading-loose">Este sitio web utiliza cookies propias y de terceros.</p>
 
   <h3>Tipos de Cookies según su funcionalidad</h3>
 
-  <p>Dependiendo de la función que cumplan, las cookies pueden ser:</p>
+  <p class="py-2 leading-loose">Dependiendo de la función que cumplan, las cookies pueden ser:</p>
 
   <ul>
     <li>
@@ -134,17 +134,17 @@ const { nombre, sitioWeb, correo } = Astro.props;
     </li>
   </ul>
 
-  <p>
+  <p class="py-2 leading-loose">
     Este sitio web utiliza cookies técnicas, de personalización, de análisis, de
     publicidad y de publicidad comportamental.
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     Algunas cookies pueden ser polivalentes, es decir, cumplir con 2 o más
     funciones.
   </p>
 
   <h3>Tipos de Cookies según su duración</h3>
-  <p>
+  <p class="py-2 leading-loose">
     Según el plazo de tiempo que permanecen activadas en el equipo terminal, las
     cookies pueden ser:
   </p>
@@ -167,7 +167,7 @@ const { nombre, sitioWeb, correo } = Astro.props;
   </ul>
 
   <h3>Consecuencias de desactivar las Cookies</h3>
-  <p>
+  <p class="py-2 leading-loose">
     A manera de ejemplo, los posibles efectos por no autorizar el uso de cookies
     pueden ser los siguientes:
   </p>
@@ -206,18 +206,18 @@ const { nombre, sitioWeb, correo } = Astro.props;
     <li>Varios. Esta lista es meramente enunciativa, no limitativa</li>
   </ul>
 
-  <p>
+  <p class="py-2 leading-loose">
     Si el usuario ha eliminado las cookies, y desea navegar nuevamente en este
     sitio web, deberá aceptar una vez más las cookies.
   </p>
 
   <h3>Cookies utililzadas en este sitio</h3>
 
-  <p>
+  <p class="py-2 leading-loose">
     Este sitio web hace uso de las siguientes cookies: técnicas, de
     personalización, de análisis, de publicidad comportamental.
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     A continuación, se detallan las cookies que utiliza este sitio web, sin
     embargo, debido a la imposibilidad técnica que esto puede generar, no se
     puede mostrar con exactitud las cookies utilizadas por terceros, pero se ha
@@ -226,7 +226,7 @@ const { nombre, sitioWeb, correo } = Astro.props;
   </p>
 
   <div class="contenedor-tabla">
-    <table>
+    <table class="a table-auto overflow-x-auto">
       <thead>
         <th>Nombre</th>
         <th>Proveedor</th>
@@ -249,14 +249,14 @@ const { nombre, sitioWeb, correo } = Astro.props;
     </table>
   </div>
 
-  <h2>Desactivación o Eliminación de Cookies</h2>
+  <h2 class="text-xl font-bold my-6">Desactivación o Eliminación de Cookies</h2>
 
-  <p>
+  <p class="py-2 leading-loose">
     En cualquier momento el usuario podrá ejercer su derecho a negarse a las
     cookies y podrá en consecuencia desactivarlas o eliminarlas, salvo aquellas
     que sean necesarias para el funcionamiento del sitio web.
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     El usuario podrá eliminar y/o bloquear las cookies, para toda navegación que
     realice o para un dominio web determinado. Esta configuración debe
     realizarla en cada navegador, si lo hace en un navegador y no en los
@@ -265,7 +265,7 @@ const { nombre, sitioWeb, correo } = Astro.props;
     deberá realizarla él de forma responsable y particular en cada navegador y/o
     dispositivo que así lo desee.
   </p>
-  <p>
+  <p class="py-2 leading-loose">
     Como cada navegador posee configuraciones diferentes, el usuario deberá
     dirigirse a la parte de ayuda de cada uno para ver el caso en particular. En
     esta sección se hace mención a los más comunes, no obstante por
@@ -311,9 +311,9 @@ const { nombre, sitioWeb, correo } = Astro.props;
     </li>
   </ul>
 
-  <h2>Avisos relacionados con las Cookies</h2>
+  <h2 class="text-xl font-bold my-6">Avisos relacionados con las Cookies</h2>
 
-  <p>El Editor no se hace responsable por los fallos técnicos que el usuario pueda
+  <p class="py-2 leading-loose">El Editor no se hace responsable por los fallos técnicos que el usuario pueda
     encontrar en el sitio web o en su navegador por manipular de manera errónea
     la desactivación o eliminación de las cookies, en todo momento deberá el
     usuario verificar la información sobre su desactivación o eliminación en la
@@ -321,58 +321,6 @@ const { nombre, sitioWeb, correo } = Astro.props;
     responsabilidad de eliminar o desactivar las cookies en su navegador y en
     por ende, asume las consecuencias que se deriven de esto.</p>
 
-    <p>En todo momento el usuario podrá comunicarse con El Editor a través del
+    <p class="py-2 leading-loose">En todo momento el usuario podrá comunicarse con El Editor a través del
       correo electrónico {correo}.</p>
 </div>
-
-<style>
-  .contenedor {
-    max-width: 1200px;
-    margin: auto;
-    padding: 32px 16px;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  h1, h2, p {
-    margin-block: 24px;
-  }
-
-  p {
-    line-height: 1.8;
-  }
-
-  ul {
-    padding-left: 32px;
-  }
-
-  li {
-    margin-block: 12px;
-  }
-
-  .contenedor-tabla {
-    padding-block: 24px;
-    overflow-x: scroll;
-  }
-
-  table {
-    margin: auto;
-    border: solid 1px grey;
-    border-radius: 4px;
-    padding: 12px;
-  }
-
-  table th {
-    border-inline: solid 1px grey;
-    padding-inline: 12px;
-  }
-
-  table td {
-    max-width: 160px;
-    border-block: solid 1px grey;
-    padding: 12px;
-  }
-
-</style>
